@@ -31,7 +31,7 @@ var plancheCoordinates = [
     [9.829999, -83.8798679]    
 ];
 
-// Añadir los polígonos al mapa
+// adición de polígonos al mapa
 var parque2 = L.polygon(parque2Coordinates, {
     color: "green", 
     fillOpacity: 0.5
@@ -49,7 +49,7 @@ var planche = L.polygon(plancheCoordinates, {
     fillOpacity: 0.5
 }).addTo(map);
 
-// Añadir popups
+// Adición de popups
 parque1.bindPopup("Parque 1 - Leisure Area").openPopup();
 parque2.bindPopup("Parque 2 - Leisure Area").openPopup();
 iglesia.bindPopup("Iglesia Pentecostal Dios Es Amor").openPopup();
@@ -72,7 +72,7 @@ fetch('export.geojson')
 .then(data => {
     L.geoJSON(data, {
         style: function (feature) {
-            return { color: 'blue' }; 
+            return { color: 'gray' }; 
         }
     }).addTo(map);
 })
